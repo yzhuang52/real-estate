@@ -17,7 +17,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     data_joined = models.DateTimeField(default=timezone.now)
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ["Username", "Last Name", "First Name"]
+    REQUIRED_FIELDS = ["username", "first_name", "last_name"]
     objects = CustomUserManager()
 
     class Meta:

@@ -19,7 +19,7 @@ class CustomUserManager(BaseUserManager):
             raise ValueError(_('User must submit a firstname'))
         if not last_name:
             raise ValueError(_('User must submit a lastname'))
-        if not email:
+        if email:
             email = self.normalize_email(email)
             self.email_validator(email)
         else:
@@ -64,6 +64,7 @@ class CustomUserManager(BaseUserManager):
             first_name=first_name,
             last_name=last_name,
             email=email,
+            password=password,
             **extra_fields
         )
         user.save(using=self.db)
