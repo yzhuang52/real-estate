@@ -39,7 +39,7 @@ THIRD_PARTY_APPS = [
     'rest_framework', 'django_filters', 'django_countries', 'phonenumber_field', 'djoser',
 ]
 
-LOCAL_APPS = ['apps.common', 'apps.users', 'apps.profiles', 'apps.ratings']
+LOCAL_APPS = ['apps.common', 'apps.users', 'apps.profiles', 'apps.ratings', 'apps.properties', 'apps.enquiries',]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
