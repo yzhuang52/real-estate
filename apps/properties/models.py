@@ -54,7 +54,7 @@ class Property(TimeStampedUUIDModel):
     )
     country = CountryField(
         verbose_name=_("Country"),
-        default="KE",
+        default="AM",
         blank_label="(select country)",
     )
     city = models.CharField(verbose_name=_("City"), max_length=180, default="Madison")
